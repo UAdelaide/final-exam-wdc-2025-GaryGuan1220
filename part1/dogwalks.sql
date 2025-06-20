@@ -62,11 +62,11 @@ INSERT INTO Users(username, email, password_hash, role) VALUES
 ('gtq123','gtq@123.com','hashed111','owner');
 
 INSERT INTO Dogs(name, size, owner_id, role) VALUES
-('Max','medium','()'),
-('Bella','small',''),
-('Bob','large',''),
-('Kevin','medium',''),
-('Shai','small','');
+('Max','medium',(SELECT user_id)),
+('Bella','small',),
+('Bob','large',),
+('Kevin','medium',),
+('Shai','small',);
 Five dogs:
 A dog named Max, who is medium-sized and owned by alice123.
 A dog named Bella, who is small and owned by carol123.
