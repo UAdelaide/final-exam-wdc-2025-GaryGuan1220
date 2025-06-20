@@ -20,6 +20,6 @@ app.use('/api/walkrequests/open', walkRequestsRoutes);
 app.use('/api/walkers/summary', walkersRoutes);
 module.exports = app;
 
-app.use((err, req, res, next) => {
-    res.status(500).json({ error: 'Internal Server Error' });
-});
+// app.use((err, req, res, next) => {
+//     res.status(500).json({ error: 'Internal Server Error' });
+// });
