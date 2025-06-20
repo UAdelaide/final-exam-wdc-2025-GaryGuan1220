@@ -7,6 +7,7 @@ router.get('/', async (req, res, next) => {
         const [rows] = await pool.query(`
             SELECT
             u.username,
+            COUNT(a.application_id) AS application
             WalkRequests.*, Dogs.name AS dog_name
             FROM WalkRequests
             JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
