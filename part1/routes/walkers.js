@@ -10,8 +10,8 @@ router.get('/', async (req, res, next) => {
                 COUNT(a.application_id) AS applications,
                 SUM(CASE WHEN a.status = 'accepted' THEN 1 ELSE 0 END) AS accepted_walks
             FROM Users.u
-            LEFT JOIN WalkApplications a ON u,user_id.dog_id = Dogs.dog_id
-            WHERE status = 'open'
+            LEFT JOIN WalkApplications a ON u.user_id = a.walker_id
+            WHERE u.role = 'open'
         `);
         res.json(rows);
     } catch (error) {
