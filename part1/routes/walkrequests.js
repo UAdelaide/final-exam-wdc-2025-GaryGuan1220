@@ -5,7 +5,7 @@ const pool = require("../db");
 router.get('/', async (req, res, next) => {
     try {
         const [rows] = await pool.query(`
-            SELECT WalkRequests.* AS dog_name AS owner
+            SELECT WalkRequests.*, Dogs.name AS dog_name
             FROM Dogs
             JOIN Users ON Dogs.owner_id = Users.user_id
         `);
