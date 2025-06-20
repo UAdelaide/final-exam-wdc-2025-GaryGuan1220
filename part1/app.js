@@ -8,7 +8,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-const dogsRoutes = require('./routes/dogs')
+const dogsRoutes = require('./routes/dogs');
+const walkRequestsRoutes = require('./routes/w');
 
 app.use(logger('dev'));
 app.use(express.json());
