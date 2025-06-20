@@ -9,7 +9,8 @@ router.get('/', async (req, res, next) -> {
             FROM Dogs
             JOIN Users ON Dogs.owner_id = Users.user_id
         `);
+        res.json(rows);
     } catch (error) {
-
+        next()
     }
 });
