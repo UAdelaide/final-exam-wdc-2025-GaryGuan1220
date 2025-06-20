@@ -8,8 +8,7 @@ router.get('/', async (req, res, next) => {
             SELECT WalkRequests.*, Dogs.name AS dog_name
             FROM WalkRequests
             JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
-            WHERE status = 'open
-            
+            WHERE status = 'open'
         `);
         res.json(rows);
     } catch (error) {
