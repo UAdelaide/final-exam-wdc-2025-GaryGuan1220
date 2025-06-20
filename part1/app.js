@@ -19,7 +19,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/dogs', dogsRoutes);
-app.use('/api/dogs', dogsRoutes);
+app.use('/api/walkrequests/open', walkRequestsRoutes);
+app.use('/api/walkers/summary', dogsRoutes);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
