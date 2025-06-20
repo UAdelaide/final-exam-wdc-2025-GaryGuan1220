@@ -21,7 +21,7 @@ app.use('/api/walkers/summary', walkersRoutes);
 module.exports = app;
 
 app.use((err, req, res, next) => {
-    console.error('❌ Error occurred:', err);
-    res.status(500).json({ error: 'Internal Server Error' });
-  });
+  console.error('❌ Error in', req.originalUrl + ':', err);
+  res.status(500).json({ error: 'Internal Server Error' });
+});
 
