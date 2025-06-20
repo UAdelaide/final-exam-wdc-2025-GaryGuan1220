@@ -2,14 +2,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const pool = require('./db');
 
 var app = express();
 
 const dogsRoutes = require('./routes/dogs');
 const walkRequestsRoutes = require('./routes/walkrequests');
 const walkersRoutes = require('./routes/walkers');
-const { error } = require('console');
 
 app.use(logger('dev'));
 app.use(express.json());
