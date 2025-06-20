@@ -18,10 +18,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/dogs', dogsRoutes);
 app.use('/api/walkrequests/open', walkRequestsRoutes);
 app.use('/api/walkers/summary', walkersRoutes);
-module.exports = app;
 
 app.use((err, req, res, next) => {
   console.error('❌ Error in', req.originalUrl + ':', err);
   res.status(500).json({ error: 'Internal Server Error' });
 });
 
+module.exports = app;
