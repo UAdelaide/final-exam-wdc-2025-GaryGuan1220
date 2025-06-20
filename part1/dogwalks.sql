@@ -69,11 +69,11 @@ INSERT INTO Dogs(name, size, owner_id, role) VALUES
 ('Shai','small', (SELECT user_id FROM Users WHERE username = 'gary123'));
 
 INSERT INTO WalkRequests(dog_id, requested_time, duration_minutes, location, status) VALUES
+((SELECT user_id FROM Users WHERE username = 'Max'),'2025-06-10 08:00:00','','',''),
+((SELECT user_id FROM Users WHERE username = 'Bella'),'','','',''),
 ((SELECT user_id FROM Users WHERE username = 'alice123'),'','','',''),
 ((SELECT user_id FROM Users WHERE username = 'alice123'),'','','',''),
-((SELECT user_id FROM Users WHERE username = 'alice123'),'','','',''),
-((SELECT user_id FROM Users WHERE username = 'alice123'),'','','',''),
-((SELECT user_id FROM Users WHERE username = 'alice123'),'','','');
+((SELECT user_id FROM Users WHERE username = 'alice123'),'','','','');
 
 
 Five walk requests:
