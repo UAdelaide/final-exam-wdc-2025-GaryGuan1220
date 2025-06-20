@@ -66,7 +66,7 @@ INSERT INTO Dogs(name, size, owner_id, role) VALUES
 ('Bella','small','',''),
 ('Bob','large-sized','',''),
 ('Kevin','','',''),
-('Shai','wusmall','','');
+('Shai','small','','');
 Five dogs:
 A dog named Max, who is medium-sized and owned by alice123.
 A dog named Bella, who is small and owned by carol123.
