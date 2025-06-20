@@ -58,8 +58,8 @@ INSERT INTO Users(username, email, password_hash, role) VALUES
 ('alice123','alice@example.com','hashed123',''),
 ('bobwalker','bob@example.com','hashed456',''),
 ('carol123','carol@example.com','hashed789',''),
-('gary123','gary@example.com','',''),
-('gtq123','','','');
+('gary123','gary@123.com','hashed000',''),
+('gtq123','gtq@123.com','','');
 Five users:
 A user with the username alice123, email alice@example.com, password hash hashed123, and role owner.
 A user with the username bobwalker, email bob@example.com, password hash hashed456, and role walker.
