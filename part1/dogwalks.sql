@@ -91,11 +91,11 @@ INSERT INTO WalkRequests(dog_id, requested_time, duration_minutes, location, sta
     'accepted'
 ),
 (
-    (SELECT dog_id FROM Dogs WHERE name = 'Bob' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')),
-    '2025-06-10 08:00:00',
-    30,
-    'Parklands',
-    'open'
+    (SELECT dog_id FROM Dogs WHERE name = 'Bob' AND owner_id = (SELECT user_id FROM Users WHERE username = 'gary123')),
+    '2025-06-13 09:00:00',
+    35,
+    'Unley',
+    'com'
 ),
 (
     (SELECT dog_id FROM Dogs WHERE name = 'Max' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')),
