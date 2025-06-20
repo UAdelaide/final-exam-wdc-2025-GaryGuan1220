@@ -67,10 +67,8 @@ INSERT INTO Dogs(name, size, owner_id, role) VALUES
 ('Bob','large', (SELECT user_id FROM Users WHERE username = 'gary123')),
 ('Kevin','medium', (SELECT user_id FROM Users WHERE username = 'gtq123')),
 ('Shai','small', (SELECT user_id FROM Users WHERE username = 'gary123'));
-Five dogs:
-A dog named Max, who is medium-sized and owned by alice123.
-A dog named Bella, who is small and owned by carol123.
-Three more dogs with details of your choosing.
+
+INSERT INTO W(name, size, owner_id, role) VALUES
 ('alice123','','',''),
 ('alice123','','',''),
 ('alice123','','',''),
