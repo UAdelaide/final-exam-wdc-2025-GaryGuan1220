@@ -63,10 +63,10 @@ INSERT INTO Users(username, email, password_hash, role) VALUES
 
 INSERT INTO Dogs(name, size, owner_id, role) VALUES
 ('Max','','',''),
-('alice123','','',''),
-('alice123','','',''),
-('alice123','','',''),
-('alice123','','','');
+('Bella','','',''),
+('Bob','','',''),
+('Kevin','','',''),
+('Shai','','','');
 Five dogs:
 A dog named Max, who is medium-sized and owned by alice123.
 A dog named Bella, who is small and owned by carol123.
