@@ -24,6 +24,8 @@ app.use('/api/walkrequests/open', walkRequestsRoutes);
 app.use('/api/walkers/summary', walkersRoutes);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use((error))
+app.use((error, req, res, next) => {
+    
+})
 const PORT = 8080;
 module.exports = app;
