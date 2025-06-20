@@ -61,23 +61,23 @@ INSERT INTO Users(username, email, password_hash, role) VALUES
 ('gary123','gary@123.com','hashed000','walker'),
 ('gtq123','gtq@123.com','hashed111','owner');
 
-INSERT INTO Dogs(name, size, password_hash, role) VALUES
-('alice123','','',''),
-('alice123','','',''),
-('alice123','','',''),
-('alice123','','',''),
-('alice123','','','');
-
-('alice123','','',''),
+INSERT INTO Dogs(name, size, owner_id, role) VALUES
+('Max','','',''),
 ('alice123','','',''),
 ('alice123','','',''),
 ('alice123','','',''),
 ('alice123','','','');
-
 Five dogs:
 A dog named Max, who is medium-sized and owned by alice123.
 A dog named Bella, who is small and owned by carol123.
 Three more dogs with details of your choosing.
+('alice123','','',''),
+('alice123','','',''),
+('alice123','','',''),
+('alice123','','',''),
+('alice123','','','');
+
+
 Five walk requests:
 A request for Max at 2025-06-10 08:00:00 for 30 minutes at Parklands, with status open.
 A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with status accepted.
