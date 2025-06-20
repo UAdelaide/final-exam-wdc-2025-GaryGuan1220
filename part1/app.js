@@ -8,6 +8,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+const dogs ROutes = r
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
