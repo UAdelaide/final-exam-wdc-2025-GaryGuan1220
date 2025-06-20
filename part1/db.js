@@ -1,3 +1,6 @@
 const mysql = require('mysql2/promise');
 
-const pool = musql.create
+const pool = musql.createPool({
+    host: 'localhost',
+    user: ''
+});
