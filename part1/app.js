@@ -9,7 +9,8 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 const dogsRoutes = require('./routes/dogs');
-const walkRequestsRoutes = require('./routes/w');
+const walkRequestsRoutes = require('./routes/walkrequests');
+const walkersRoutes = require('./routes/dogs');
 
 app.use(logger('dev'));
 app.use(express.json());
