@@ -11,6 +11,7 @@ var app = express();
 const dogsRoutes = require('./routes/dogs');
 const walkRequestsRoutes = require('./routes/walkrequests');
 const walkersRoutes = require('./routes/walkers');
+const { error } = require('console');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -23,5 +24,6 @@ app.use('/api/walkrequests/open', walkRequestsRoutes);
 app.use('/api/walkers/summary', walkersRoutes);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use((error))
 const PORT = 8080;
 module.exports = app;
