@@ -68,7 +68,7 @@ INSERT INTO Dogs(name, size, owner_id, role) VALUES
 ('Kevin','medium', (SELECT user_id FROM Users WHERE username = 'gtq123')),
 ('Shai','small', (SELECT user_id FROM Users WHERE username = 'gary123'));
 
-INSERT INTO W(name, size, owner_id, role) VALUES
+INSERT INTO WalkRequests(dog_id, requested_time, owner_id, role) VALUES
 ('alice123','','',''),
 ('alice123','','',''),
 ('alice123','','',''),
