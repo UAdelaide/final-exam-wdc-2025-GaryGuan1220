@@ -7,7 +7,9 @@ router.get('/', async (req, res, next) => {
         const [rows] = await pool.query(`
             SELECT WalkRequests.*, Dogs.name AS dog_name
             FROM WalkRequests
-            JOIN Dogs ON WalkRequests. = Users.user_id
+            JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
+            WHERE status = 'open
+            
         `);
         res.json(rows);
     } catch (error) {
