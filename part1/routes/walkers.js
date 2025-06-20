@@ -8,7 +8,7 @@ router.get('/', async (req, res, next) => {
             SELECT
             u.username,
             COUNT(a.application_id) AS applications,
-            SUM(CASE WHEN a.status = 'accepted' the)
+            SUM(CASE WHEN a.status = 'accepted' THEN 1 ELSE 0 END) AS accepted_)
             WalkRequests.*, Dogs.name AS dog_name
             FROM WalkRequests
             JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
