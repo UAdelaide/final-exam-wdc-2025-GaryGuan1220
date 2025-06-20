@@ -11,7 +11,6 @@ router.get('/', async (req, res, next) => {
         `);
         res.json(rows);
     } catch (error) {
-        console.error('🐶 Error in /api/dogs:', error);  // 添加日志
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
