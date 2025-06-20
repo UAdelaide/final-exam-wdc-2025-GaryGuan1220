@@ -63,10 +63,10 @@ INSERT INTO Users(username, email, password_hash, role) VALUES
 
 INSERT INTO Dogs(name, size, owner_id, role) VALUES
 ('Max','medium', (SELECT user_id FROM Users WHERE username = 'alice123')),
-('Bella','small', (SELECT user_id FROM Users WHERE username = 'alice123')),
-('Bob','large', (SELECT user_id FROM Users WHERE username = 'alice123')),
-('Kevin','medium', (SELECT user_id FROM Users WHERE username = 'alice123')),
-('Shai','small', (SELECT user_id FROM Users WHERE username = 'alice123'));
+('Bella','small', (SELECT user_id FROM Users WHERE username = 'carol123')),
+('Bob','large', (SELECT user_id FROM Users WHERE username = 'gary123')),
+('Kevin','medium', (SELECT user_id FROM Users WHERE username = 'gtq123')),
+('Shai','small', (SELECT user_id FROM Users WHERE username = 'gary123'));
 Five dogs:
 A dog named Max, who is medium-sized and owned by alice123.
 A dog named Bella, who is small and owned by carol123.
