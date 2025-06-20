@@ -4,5 +4,7 @@ const pool = musql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: ''
+    database: 'DogWalkService'
 });
+
+module.exports = pool;
