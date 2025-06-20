@@ -11,6 +11,8 @@ router.get('/', async (req, res, next) -> {
         `);
         res.json(rows);
     } catch (error) {
-        next()
+        next(error);
     }
 });
+
+module.exports = router;
