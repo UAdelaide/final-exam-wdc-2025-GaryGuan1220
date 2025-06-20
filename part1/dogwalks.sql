@@ -55,10 +55,10 @@ CREATE TABLE WalkRatings (
 );
 
 INSERT INTO Users(username, email, password_hash, role) VALUES
-('alice123','alice@example.com','',''),
-('bobwalker','bob@example.com','',''),
-('carol123','','',''),
-('gary123','','',''),
+('alice123','alice@example.com','hashed123',''),
+('bobwalker','bob@example.com','hashed456',''),
+('carol123','carol@example.com','hashed789',''),
+('gary123','gary@example.com','',''),
 ('gtq123','','','');
 Five users:
 A user with the username alice123, email alice@example.com, password hash hashed123, and role owner.
