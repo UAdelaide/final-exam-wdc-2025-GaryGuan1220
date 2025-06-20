@@ -22,8 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/dogs', dogsRoutes);
 app.use('/api/walkrequests/open', walkRequestsRoutes);
 app.use('/api/walkers/summary', walkersRoutes);
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 module.exports = app;
 
 app.use((err, req, res, next) => {
