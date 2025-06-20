@@ -8,7 +8,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-const dogs ROutes = r
+const dogsRoutes = require('./routes/dogs')
 
 app.use(logger('dev'));
 app.use(express.json());
