@@ -16,10 +16,10 @@ app.use(session({
     saveUninitialized: true
 }));
 
-
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
+const loginRoute = require('./routes/login');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
