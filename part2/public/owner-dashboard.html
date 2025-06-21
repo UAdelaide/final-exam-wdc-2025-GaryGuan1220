@@ -83,6 +83,22 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
+        const myDogs = ref([]);
+        const ownerId = 1;
+
+        async function loadMyDogs() {
+          try {
+            const res = await fetch(`/api/dogs/owner/${ownerId}`);
+            myDogs.value = await res.json();
+          } catch (err) {
+            error.value = 'Failed to load your dogs';
+          }
+        }
+
+        onMounted(() => {
+          loadMyDogs();
+          loadWalks();
+        });
 
         async function loadWalks() {
           try {
