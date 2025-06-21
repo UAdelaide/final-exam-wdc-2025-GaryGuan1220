@@ -93,7 +93,7 @@
         async function logout() {
           try {
             await fetch('/api/logout', { method: 'POST', credentials: 'include' });
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
           } catch (err) {
             alert('Logout failed');
           }
