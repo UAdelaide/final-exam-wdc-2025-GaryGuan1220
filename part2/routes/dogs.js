@@ -21,7 +21,8 @@ router.get('/dogs', async (req, res) =>{
     const [rows] = await db.query('SELECT * FROM dogs');
     res.json(rows);
   } catch (err) {
-    console.error
+    console.error(err);
+    res.status(500).json({})
   }
 });
 
