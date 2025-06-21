@@ -65,7 +65,6 @@
           }
         }
 
-
         async function applyToWalk(requestId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
@@ -93,10 +92,8 @@
           walks,
           message,
           error,
-          form,
-          submitWalkRequest,
-          logout,
-          applyToWalk
+          applyToWalk,
+          logout
         };
       }
     }).mount('#app');
