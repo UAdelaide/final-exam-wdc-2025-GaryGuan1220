@@ -2,6 +2,16 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 
+router.get('/dogs', async (req, res) => {
+  try {
+    const [rows] = await db.query('SELECT * FROM dogs');
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Database error'});
+  }
+});
+
 // GET /api/dogs/owner/:ownerId
 router.get('/owner/:ownerId', async (req, res) => {
   try {
@@ -13,16 +23,6 @@ router.get('/owner/:ownerId', async (req, res) => {
     res.json(rows);
   } catch (err) {
     res.status(500).json({ error: 'Failed to retrieve dogs for owner' });
-  }
-});
-
-router.get('/dogs', async (req, res) => {
-  try {
-    const [rows] = await db.query('SELECT * FROM dogs');
-    res.json(rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Database error'});
   }
 });
 
