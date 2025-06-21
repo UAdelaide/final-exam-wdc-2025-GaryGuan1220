@@ -91,14 +91,13 @@
         }
 
         async function logout() {
-  try {
-    await fetch('/api/logout', { method: 'POST', credentials: 'include' });
-    window.location.href = 'login.html';
-  } catch (err) {
-    alert('Logout failed');
-  }
-}
-
+          try {
+            await fetch('/api/logout', { method: 'POST', credentials: 'include' });
+            window.location.href = 'login.html';
+          } catch (err) {
+            alert('Logout failed');
+          }
+        }
 
         async function submitWalkRequest() {
           try {
@@ -135,8 +134,10 @@
           walks,
           message,
           error,
-          submitWalkRequest
+          submitWalkRequest,
+          logout
         };
+
       }
     }).mount('#app');
   </script>
