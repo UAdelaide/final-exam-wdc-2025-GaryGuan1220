@@ -16,6 +16,12 @@ router.get('/owner/:ownerId', async (req, res) => {
   }
 });
 
-router.get('/dogs',)
+router.get('/dogs', async (req, res) =>{
+  try {
+    cons
+  } catch (err) {
+
+  }
+});
 
 module.exports = router;
