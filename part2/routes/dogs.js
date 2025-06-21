@@ -18,7 +18,7 @@ router.get('/owner/:ownerId', async (req, res) => {
 
 router.get('/dogs', async (req, res) =>{
   try {
-    cons
+    const [rows] = await db.query('')
   } catch (err) {
 
   }
