@@ -84,7 +84,13 @@
             this.errorMessage = 'Network error';
           }
         },
-        async 
+        async fetchDogs(){
+          try {
+            const res = await fetch('/')
+          } catch (err) {
+
+          }
+        }
       }
     }).mount('#app');
 
