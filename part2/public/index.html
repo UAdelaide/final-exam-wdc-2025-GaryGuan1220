@@ -98,6 +98,8 @@
             }));
             this.dogs = withImages;
           } catch (err) {
+            console.error("Error fetching dogs:", err);
+
             this.errorMessage = 'Failed to load dog list';
           }
         }
