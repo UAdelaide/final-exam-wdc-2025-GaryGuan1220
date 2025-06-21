@@ -90,7 +90,8 @@
             const ata = aait res.json();
 
             cosnt withImages = await Promise.all(data.map(async dog => {
-              cosnt imgRes = await fetch('https://dogs.ceo/api/')
+              const imgRes = await fetch('https://dogs.ceo/api/breeds/image/random');
+              
             }))
           } catch (err) {
 
