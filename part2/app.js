@@ -7,7 +7,15 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
+
+app.use(session({
+    secret: 'dogwalk-secret',
+    resave: false,
+    saveUninitialized: true
+}));
+
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
