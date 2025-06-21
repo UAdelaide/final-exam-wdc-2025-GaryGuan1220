@@ -89,7 +89,9 @@
             const res = await fetch('/api/dogs');
             const ata = aait res.json();
 
-            cosnt withImages = await Prom
+            cosnt withImages = await Promise.all(data.map(async dog => {
+              cosnt imgRes  
+            }))
           } catch (err) {
 
           }
