@@ -6,11 +6,16 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   <style>
     body {
-      font-family: Comic Sans MS;
-      background: linear-gradient(red, yellow);
-      animation: blink 0.5s infinite;
-      text-align: center;
-    }
+        font-family: Comic Sans MS;
+        text-align: center;
+        animation: blink 0.5s infinite alternate;
+        }
+
+        @keyframes blink {
+        0%   { background-color: red; }
+        100% { background-color: yellow; }
+        }
+
 
     @keyframes blink {
       0% { background-color: red; }
