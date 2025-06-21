@@ -22,10 +22,37 @@
     createApp({
       data() {
         return {
-          message: 'Welcome to the Dog Walking Service!'
+          message: 'Welcome to the Dog Walking Service!',
+          username: '',
+          password: '',
+          errorMessage: ''
         };
       }
     }).mount('#app');
+    methods: {
+        async login() {
+          try {
+            const res = await fetch('/api/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                username: this.username,
+                password: this.password
+              })
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+              window.location.href = data.redirect;
+            } else {
+              this.errorMessage = data.error;
+            }
+          } catch (err) {
+            this.errorMessage = 'Network error';
+          }
+        }
+      }
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
