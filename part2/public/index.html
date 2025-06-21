@@ -96,8 +96,11 @@
             }));
             this.dogs = withImages;
           } catch (err) {
-            this.errorMessage = 
+            this.errorMessage = 'Failed to load dog list';
           }
+        },
+        mounted(){
+          
         }
       }
     }).mount('#app');
