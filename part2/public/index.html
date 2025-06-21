@@ -94,9 +94,9 @@
               const imgData = await imgRes.json();
               return { ...dog, image: imgData.message };
             }));
-            
+            this.dogs = withImages;
           } catch (err) {
-
+            this.errorMessage = 
           }
         }
       }
